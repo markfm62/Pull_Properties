@@ -1,6 +1,6 @@
 #Requires -Version 7
 <#PSScriptInfo
-.VERSION 1.0
+.VERSION 1.0.1
 .AUTHOR Mark Moriarty
 .COPYRIGHT 2024
 .EXTERNALSCRIPTDEPENDENCIES
@@ -128,7 +128,11 @@ $FileContent = Get-Content 'build.prop'
 	$fwVal = $fwVal.replace('\','_')
 	$fwVal = $fwVal.replace('/','_')
 	
-	$FnamePrefix = $UCbrand + "_" + $modelVal + "_" + $fwVal 	# used for the various output files
+	If ($patchVal -eq "") {  # no security_oatch value
+	  $FnamePrefix = $UCbrand + "_" + $modelVal + "_" + $fwVal 	# used for the various output files
+	} else {  # include the patch_level date in the name string
+	  $FnamePrefix = $UCbrand + "_" + $modelVal + "_" + $patchVal + "_" + $fwVal 
+	}
 	# save the list of properties
 	$Fname = $FnamePrefix + ".txt"
 	$OutLine= "Properties = " + $PropsCount + " Matches = " + $MatchCount + "   " + $fwVal
