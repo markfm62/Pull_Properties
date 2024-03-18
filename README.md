@@ -1,5 +1,5 @@
 # Pull_Properties
-Utility to extract the fields from firmware /vendor/build.prop or /system/system/build.prop, or from the /system/build.prop in an active phone.  
+Utility to extract the fields from firmware build.prop files.  
 
 Output files:
 1. xxxx.txt - list of the fields pulled from the firmware
@@ -11,7 +11,4 @@ Output files:
 Read the script header comment sections for description of its usage.
  
 NOTE:
-If you don't have Powershell version 7, install it and run this script from a PS7 terminal window.
-Older PS versions have an issue (known bug) with writing two extra characters on the first line of a file
-If you don't install powershell 7, delete the "Requires" line at the top, but you will then need to edit the
-output pif.json file, remove the obvious odd characters at the very start of the file.
+If you don't have Powershell version 7, install it and run this script from a PS7 terminal window. Older PS versions have an issue (known bug) with writing two extra characters on the first line of a file. If you don't install powershell 7, delete the "Requires" line at the top, but you will then need to edit the output pif.json file, remove the obvious odd characters at the very start of the file.
