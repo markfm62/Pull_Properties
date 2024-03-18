@@ -1,5 +1,5 @@
 # Pull_Properties
-Utility to extract the fields needed for a pif.json file from a firmware build.prop file.  
+pull_properities.ps1 is a utility to extract the fields needed for a pif.json file from a firmware build.prop file.  
 
 Output files:
 1. xxxx.txt - list of the fields pulled from the firmware
